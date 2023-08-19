@@ -1,0 +1,31 @@
+//**
+Output:
+Enter the height of the pattern: 7
+G F E D C B A 
+F E D C B A 
+E D C B A 
+D C B A 
+C B A 
+B A 
+A 
+**//
+#include <stdio.h>
+
+int main()
+{
+	int height;
+
+	printf("Enter the height of the pattern: ");
+	scanf("%d", &height);
+
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = height - i; j > 0; j--)
+		{
+			printf("%c ", 'A' + j - 1);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
